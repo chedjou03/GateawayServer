@@ -1,1 +1,5 @@
+com/gatewayserver/filter/TraceFilter.class
+com/gatewayserver/filter/FilterUtility.class
+com/gatewayserver/configuration/Myroutes.class
 com/gatewayserver/GatewayServerApplication.class
+com/gatewayserver/filter/ResponseTraceFilter.class

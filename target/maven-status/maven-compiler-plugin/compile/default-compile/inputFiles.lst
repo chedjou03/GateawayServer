@@ -1,1 +1,5 @@
 /Users/simplicechedjou/Desktop/UdemyProject/MasterMicroserviceJavaSpringDockerKubernetes/BankApplicationGit/GateawayServer/src/main/java/com/gatewayserver/GatewayServerApplication.java
+/Users/simplicechedjou/Desktop/UdemyProject/MasterMicroserviceJavaSpringDockerKubernetes/BankApplicationGit/GateawayServer/src/main/java/com/gatewayserver/filter/FilterUtility.java
+/Users/simplicechedjou/Desktop/UdemyProject/MasterMicroserviceJavaSpringDockerKubernetes/BankApplicationGit/GateawayServer/src/main/java/com/gatewayserver/filter/TraceFilter.java
+/Users/simplicechedjou/Desktop/UdemyProject/MasterMicroserviceJavaSpringDockerKubernetes/BankApplicationGit/GateawayServer/src/main/java/com/gatewayserver/filter/ResponseTraceFilter.java
+/Users/simplicechedjou/Desktop/UdemyProject/MasterMicroserviceJavaSpringDockerKubernetes/BankApplicationGit/GateawayServer/src/main/java/com/gatewayserver/configuration/Myroutes.java
