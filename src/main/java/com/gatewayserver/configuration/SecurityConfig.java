@@ -14,8 +14,8 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 import reactor.core.publisher.Mono;
 
 
-@Configuration
-@EnableWebFluxSecurity
+//@Configuration
+//@EnableWebFluxSecurity
 public class SecurityConfig {
 
     @Bean
@@ -25,17 +25,8 @@ public class SecurityConfig {
                         .pathMatchers("/chedjoubank/accounts/**").authenticated()
                         .pathMatchers("/chedjoubank/cards/**").authenticated()
                         .pathMatchers("/chedjoubank/loans/**").permitAll())
-                .oauth2ResourceServer().jwt();//.jwtAuthenticationConverter(grantedAuthoritiesExtractor());
+                .oauth2ResourceServer().jwt();
         http.csrf().disable();
         return http.build();
-
-    }
-
-    Converter<Jwt, Mono<AbstractAuthenticationToken>> grantedAuthoritiesExtractor() {
-        JwtAuthenticationConverter jwtAuthenticationConverter =
-                new JwtAuthenticationConverter();
-        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter
-                (new KeycloakRoleConverter());
-        return new ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter);
     }
 }

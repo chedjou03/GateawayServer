@@ -1,6 +1,8 @@
 package com.gatewayserver.configuration;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.security.authentication.jaas.JaasGrantedAuthority;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -11,11 +13,15 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+@Log4j2
 public class KeycloakRoleConverter implements Converter<Jwt, Collection<GrantedAuthority>> {
+
+
 
     @Override
     public Collection<GrantedAuthority> convert(Jwt jwt) {
         Map<String, Object> realmAccess = (Map<String, Object>) jwt.getClaims().get("realm_access");
+        log.info(">>>>>>>>> : realmAccess"+realmAccess);
         if (realmAccess == null || realmAccess.isEmpty()) {
             return new ArrayList<>();
         }
